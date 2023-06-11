@@ -1,11 +1,12 @@
 ﻿#include "breadthFirst.hpp"
 
+
 int main()
 {
-	srand(543);
+	srand(213);
 	Map testmap;
-	/*int startX = rand() % MAPSIZE,startY = rand() % MAPSIZE,destX = rand() % MAPSIZE, destY = rand() % MAPSIZE;*/
-	int startX = 8, startY = 8, destX = 2, destY = 2;
+	int startX = rand() % MAPSIZE,startY = rand() % MAPSIZE,destX = rand() % MAPSIZE, destY = rand() % MAPSIZE;
+	//int startX = 8, startY = 8, destX = 2, destY = 2;
 	PathNode* start = new PathNode(startX, startY, &testmap, 3.0, 0, destX,destY);
 	bool go = true;
 	double minDistance = 0;
@@ -15,7 +16,7 @@ int main()
 	while (go)
 	{
 		
-		minDistance += 0.5;
+		minDistance += 0.05;
 		nodeCount += start->proceed(minDistance, target);
 		go = *target == nullptr;
 	}
@@ -69,5 +70,6 @@ int main()
 		std::cout << std::endl;
 		addPath = true;
 	}
+	std::cout << "Totally nodes (moves) created: " << nodeCount << std::endl;
 	return 1;
 }

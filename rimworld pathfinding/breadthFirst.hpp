@@ -7,6 +7,7 @@ class PathNode
 private:
 	void kill();
 	//deallocates path and sets isDead to yes
+	bool isAcceptableTile(int x, int y, double minDist);
 public:
 	std::vector<std::pair<int, int>> path;
 	std::pair <int, int> destination;

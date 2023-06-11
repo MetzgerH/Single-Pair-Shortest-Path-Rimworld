@@ -1,7 +1,7 @@
 #include <math.h>
 #include <random>
 
-#define MAPSIZE 10
+#define MAPSIZE 12
 
 typedef struct tile
 {

@@ -2,9 +2,9 @@
 
 bool useHardTurns{ false };
 //useHardTurns is a variable that decides whether you can move at a right angle to the the move you just took (taking a hard turn)
-//if enabled, the pathing will complete in with O(n^5) created nodes (tested moves), where n the length of the shortest route, 
+//if enabled, the pathing will complete in with O(5^n) created nodes (tested moves), where n the length of the shortest route, 
 	// but it is guaranteed to find the shortest route (I think)
-//if disabled, the pathing will complete in with O(n^3) created nodes (tested moves), where n the length of the shortest route, 
+//if disabled, the pathing will complete in with O(3^n) created nodes (tested moves), where n the length of the shortest route, 
 	// but it could fail to find the shortest route if there are tiles with very high walkOverSpeed
 
 int PathNode::proceed(double minDist, PathNode** target)
